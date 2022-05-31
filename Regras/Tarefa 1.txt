@@ -27,7 +27,10 @@ Telefone (Quantidade de telefones é variável).
 
 
 TABELA DE TELEFONES A PARTE:
-ID; FK_PF; FK_PJ; TELEFONE
+ID; 
+TELEFONE; 
+FK_PF; 
+FK_PJ; 
 
 Regras:
 - O campo ‘Empresa’ será um cadastro a parte;
