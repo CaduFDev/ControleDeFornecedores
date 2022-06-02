@@ -3,6 +3,7 @@ TITULO: CONTROLE DE FORNECEDORES
 Criar uma listagem de fornecedores relacionado a uma empresa;
 
 A empresa deverá ser composta por:
+ID<
 UF;
 Nome Fantasia;
 CNPJ.
@@ -10,6 +11,7 @@ CNPJ.
 O fornecedor deverá ser composto por:
 
 PJ:
+ID <
 Empresa;
 Nome;
 CNPJ;
@@ -22,15 +24,15 @@ Nome;
 CPF
 Data/hora de cadastro;
 Telefone (Quantidade de telefones é variável).
-+RG 
-+NASCIMENTO
+RG <
+NASCIMENTO<
 
 
-TABELA DE TELEFONES A PARTE:
-ID; 
-TELEFONE; 
-FK_PF; 
-FK_PJ; 
+TABELA DE TELEFONES A PARTE: <
+ID; <
+TELEFONE; <
+FK_PF; <
+FK_PJ; <
 
 Regras:
 - O campo ‘Empresa’ será um cadastro a parte;
