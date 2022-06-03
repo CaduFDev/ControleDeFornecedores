@@ -42,7 +42,7 @@ CREATE TABLE TELEFONES_ADICIONAIS
 ); 
 
 
-/* ------------------------ PROCEDURES ------------------------ */
+/* ------------------------ BUSCAS PF ------------------------ */
 CREATE OR ALTER PROC VerRegistrosPF @EMP INT, @ID INT AS BEGIN
 SELECT PF.ID,
 	   PF.NOME,
@@ -52,10 +52,20 @@ SELECT PF.ID,
 	   TAD.TELEFONE AS TEL_ADICIONAIS,
 	   PF.RG,
 	   PF.NASCIMENTO
-	   FROM dbo.FORN_PF AS PF
-	   INNER JOIN dbo.EMPRESA AS EMP ON EMP.ID = @EMP
-	   INNER JOIN dbo.TELEFONES_ADICIONAIS AS TAD ON TAD.FK_PF = @ID;
+	   FROM dbo.FORN_PF AS PF 	   
+	   INNER JOIN dbo.TELEFONES_ADICIONAIS AS TAD ON TAD.FK_PF = @ID
+	   WHERE PF.FK_EMP = @EMP;
 END; 
+
+CREATE OR ALTER PROC FiltrarPF @Emp int, @busca varchar(100) AS BEGIN
+SELECT * FROM dbo.FORN_PF AS PF	   
+	     WHERE PF.FK_EMP = @EMP AND PF.ID LIKE '%' + @busca +'%' OR PF.NOME LIKE '%' + @busca +'%' OR PF.CPF LIKE '%' + @busca +'%'
+		 ORDER BY PF.NOME;	   
+END;
+
+
+
+/* ------------------------ BUSCAS PJ ------------------------ */
 
 CREATE OR ALTER PROC VerRegistrosPJ @EMP INT, @ID INT AS BEGIN
 SELECT PJ.ID,
@@ -65,9 +75,13 @@ SELECT PJ.ID,
 	   PJ.TELEFONE,
 	   TAD.TELEFONE AS TEL_ADICIONAIS
 	   FROM dbo.FORN_PJ AS PJ
-	   INNER JOIN dbo.EMPRESA AS EMP ON EMP.ID = @EMP
-	   INNER JOIN dbo.TELEFONES_ADICIONAIS AS TAD ON TAD.FK_PJ = @ID;
+	   INNER JOIN dbo.TELEFONES_ADICIONAIS AS TAD ON TAD.FK_PJ = @ID
+	   WHERE PJ.FK_EMP = @EMP;
 END; 
+
+
+
+
 
 /* ------------------------ INSERT ------------------------ */
 
@@ -76,13 +90,14 @@ INSERT INTO dbo.EMPRESA (UF, NOMEFANTASIA, CNPJ) VALUES (@UF, @NM, @CNPJ)
 END;
 
 CREATE OR ALTER PROC InserirPF @nm varchar(30), @cpf varchar(14), @dtc datetime, @tel varchar(13), @rg varchar(9), @nasc date AS BEGIN
-INSERT INTO dbo.FORN_PF (NOME,CPF,DATA_CADASTRO,TELEFONE,RG,NASCIMENTO) VALUES (@nm,@cpf,@dtc,@tel,@rg,@nasc)
+INSERT INTO dbo.FORN_PF (NOME,CPF,DATA_CADASTRO,TELEFONE,RG,NASCIMENTO) VALUES (@nm, @cpf, @dtc, @tel, @rg, @nasc)
 END;
 
 CREATE OR ALTER PROC InserirPJ @nm varchar(30), @cpj varchar(14), @dtc datetime, @tel varchar(13) AS BEGIN
-INSERT INTO dbo.FORN_PJ (NOMEFANTASIA,CNPJ,DATA_CADASTRO,TELEFONE) VALUES (@nm,@cpj,@dtc,@tel)
+INSERT INTO dbo.FORN_PJ (NOMEFANTASIA,CNPJ,DATA_CADASTRO,TELEFONE) VALUES (@nm, @cpj, @dtc, @tel)
 END;
 
 CREATE OR ALTER PROC InserirTelAdd @tel varchar(13), @FkPj int, @FkPf int AS BEGIN
 INSERT INTO TELEFONES_ADICIONAIS (TELEFONE,FK_PJ,FK_PF) VALUES (@tel, @FkPj, @FkPf)
 END;
+
