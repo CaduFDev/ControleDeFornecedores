@@ -1,9 +1,13 @@
 /* PROC: Procurar Registro -PF */
-exec VerRegistrosPJ 1,1;
+exec VerRegistrosPF 1,1;
+
 exec FiltrarPF 1, '2';
 
 /* PROC: Procurar Registro -Pj */
-exec VerRegistrosPF 1,1;
-/*PROC: */
+exec VerRegistrosPJ 1,1;
+
+exec FiltrarPJ 1, '2';
 
 
+SELECT * FROM dbo.EMPRESA
+WHERE CNPJ = 17770705000190;
