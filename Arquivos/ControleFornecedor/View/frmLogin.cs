@@ -20,28 +20,22 @@ namespace View
         }
 
         public string CNPJ { get; set; }
-        string[] iEmpresa = new string[3];
+        
         private void btnAcessar_Click(object sender, EventArgs e)
         {
             
             CessaoLogin cl = new CessaoLogin();
             CNPJ = Convert.ToString(txtCnpj.Text).Trim();            
+
             if (cl.VfLogin(CNPJ))
             {
-                EmpresaLogada empresaLogada = new EmpresaLogada();
-                VrEmpresa vrEmpresa = new VrEmpresa();
-                
-                /*Obter o ID da empresa*/
-                iEmpresa = vrEmpresa.InfoEmpresa(CNPJ);
-                empresaLogada.ID = Convert.ToInt32(iEmpresa[0]);
-                empresaLogada.UF = Convert.ToString(iEmpresa[1]);
-                empresaLogada.Nome = Convert.ToString(iEmpresa[2]);
-                empresaLogada.CNPJ = Convert.ToString(iEmpresa[3]);
 
-                MessageBox.Show($"Bem vindo! {empresaLogada.Nome}!", "Cadastro localizado");
+                string[] empInfo = InfoEmpresa(CNPJ);
+                MessageBox.Show($"Bem vindo! {empInfo[2].ToString()}!", "Cadastro localizado");
                 this.Visible = false;                
 
                 DashBoard dashBoard = new DashBoard();
+                dashBoard.idEmp = Convert.ToInt32(empInfo[0]);
                 dashBoard.ShowDialog();
 
             }
@@ -56,6 +50,20 @@ namespace View
                     FrmCadEmpresa.ShowDialog();
                 }
             }
+        }
+        
+        public string[] InfoEmpresa(string cnpj)
+        {
+            string[] iEmpresa = new string[4];
+            VrEmpresa vrEmpresa = new VrEmpresa();
+            EmpresaLogada empresaLogada = new EmpresaLogada();
+            iEmpresa = vrEmpresa.InfoEmpresa(CNPJ);
+            empresaLogada.ID = Convert.ToInt32(iEmpresa[0]);
+            empresaLogada.UF = Convert.ToString(iEmpresa[1]);
+            empresaLogada.Nome = Convert.ToString(iEmpresa[2]);
+            empresaLogada.CNPJ = Convert.ToString(iEmpresa[3]);
+            return iEmpresa;
+
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

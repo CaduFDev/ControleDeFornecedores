@@ -69,15 +69,12 @@ namespace Model.VrFi
                 acesso.Open();
                 using (var cmd = Comando(acesso))
                 {
-                    DataTable data = new DataTable();
                     cmd.CommandText = "SELECT * FROM dbo.FORN_PF WHERE FK_EMP = @CNPJ;";
                     cmd.Parameters.Add(new SqlParameter("@CNPJ", id));
                     cmd.CommandType = CommandType.Text;
                     var resultado = Leitor(cmd);
-                    while (resultado.HasRows)
-                    {
-                        data.Load(resultado);
-                    }
+                    DataTable data = new DataTable();                    
+                    data.Load(resultado);
                     return data;
                 }
             }
@@ -88,19 +85,15 @@ namespace Model.VrFi
             {
                 acesso.Open();
                 using (var cmd = Comando(acesso))
-                {
-                    DataTable data = new DataTable();
+                {                    
                     cmd.CommandText = "SELECT * FROM dbo.FORN_PJ WHERE FK_EMP = @CNPJ;";
                     cmd.Parameters.Add(new SqlParameter("@CNPJ", id));
                     cmd.CommandType = CommandType.Text;
-                    var resultado = Leitor(cmd);
-                    while (resultado.HasRows)
-                    {
-                        data.Load(resultado);
-                    }
+                    var resultado = cmd.ExecuteReader();
+                    DataTable data = new DataTable();
+                    data.Load(resultado);
                     return data;
                 }
-
             }
         }
     }

@@ -18,13 +18,14 @@ namespace View
         {
             InitializeComponent();
         }
-
+        public int idEmp { get; set; } 
+        
+        public string[] iEmpresa { get; set; } = new string[4];
         public void CarregarData()
         {            
             VrEmpresa vrEmpresa = new VrEmpresa();
-            EmpresaLogada empresaLogada = new EmpresaLogada();
-            dgvContatosPf.DataSource = vrEmpresa.InfoFornPf(empresaLogada.ID);
-            dgvContatosPj.DataSource = vrEmpresa.InfoFornPj(empresaLogada.ID);
+            dgvContatosPf.DataSource = vrEmpresa.InfoFornPf(idEmp);
+            dgvContatosPj.DataSource = vrEmpresa.InfoFornPj(idEmp);
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -40,12 +41,14 @@ namespace View
         private void btnPJ_Click(object sender, EventArgs e)
         {
             AddPj addPj = new AddPj();
+            addPj.FkEmp = idEmp;
             addPj.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             AddPF addPF = new AddPF();
+            addPF.FkEmp = idEmp;
             addPF.ShowDialog();
         }
 

@@ -10,4 +10,5 @@ exec FiltrarPJ 1, '2';
 
 
 SELECT * FROM dbo.EMPRESA
-WHERE CNPJ = 17770705000190;
+select * from dbo.FORN_PF
+select * from dbo.FORN_PJ

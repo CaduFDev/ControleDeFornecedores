@@ -111,7 +111,9 @@
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "AddPj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPj";
+            this.Load += new System.EventHandler(this.AddPj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

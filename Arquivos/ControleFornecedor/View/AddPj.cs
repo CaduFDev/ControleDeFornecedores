@@ -19,15 +19,21 @@ namespace View
         {
             InitializeComponent();
         }
-
+        public int FkEmp { get; set; }
         private void btnCriar_Click(object sender, EventArgs e)
         {
+            
             CmdFornPJ cmdFornPJ = new CmdFornPJ();
             EmpresaLogada empresaLogada = new EmpresaLogada();
-            cmdFornPJ.Inserir(txtNomeFantasia.Text, txtCnpj.Text, DateTime.Now, txtTelefone.Text, empresaLogada.ID);
+            cmdFornPJ.Inserir(txtNomeFantasia.Text, txtCnpj.Text, DateTime.Now, txtTelefone.Text,FkEmp);
             MessageBox.Show("Cadastro Realizado com sucesso!");
             DashBoard dashBoard = new DashBoard();
             dashBoard.CarregarData();
+
+        }
+
+        private void AddPj_Load(object sender, EventArgs e)
+        {
 
         }
     }

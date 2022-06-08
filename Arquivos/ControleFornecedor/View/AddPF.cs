@@ -18,24 +18,22 @@ namespace View
         {
             InitializeComponent();
         }
+        
+        public int FkEmp { get; set; }
+
         private void btnCriar_Click(object sender, EventArgs e)
         {
             EmpresaLogada empresaLogada = new EmpresaLogada();
-            int dia = DateTime.Now.Day;
-            int mes = DateTime.Now.Month;
-            int ano = DateTime.Now.Year - 18;
-            
-            DateTime menorIdade = Convert.ToDateTime(dia + "/" + mes + "/" + ano);
-            DateTime dataNascimento = Convert.ToDateTime(txtNascimento.Text);            
-
-            if (empresaLogada.UF == "PR" && dataNascimento == menorIdade)
+            DateTime dataNascimento = Convert.ToDateTime(txtNascimento.Text);
+            int menorIdade = comparar(dataNascimento);
+            if (empresaLogada.UF == "PR" && menorIdade < 6.570)
             {
                 MessageBox.Show("Seu estado não permite cadastro de menores de idade!");
             }
             else
             {
                 CmdFornPF cmdFornPF = new CmdFornPF();
-                cmdFornPF.Inserir(txtNome.Text, txtCpf.Text, DateTime.Now, txtTelefone.Text, txtRg.Text, txtNascimento.Text, empresaLogada.ID);
+                cmdFornPF.Inserir(txtNome.Text, txtCpf.Text, DateTime.Now, txtTelefone.Text, txtRg.Text, txtNascimento.Text,FkEmp);
                 MessageBox.Show("Cadastro concluido!");
                
                 DashBoard dashBoard = new DashBoard();
@@ -43,5 +41,13 @@ namespace View
             }
             
         }
+        public static int comparar (DateTime dataNascimento)
+        {
+            DateTime menorIdade = new DateTime(DateTime.Today.Year - 18, 1, 1);
+            int resultado = (int)dataNascimento.Subtract(menorIdade).TotalDays;
+            return resultado;
+            
+        }
+       
     }
 }
