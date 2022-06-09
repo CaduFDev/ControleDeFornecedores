@@ -1,4 +1,5 @@
-﻿using Model.VrFi;
+﻿using Model.Negocio;
+using Model.VrFi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,14 +19,15 @@ namespace View
         {
             InitializeComponent();
         }
-        public int idEmp { get; set; } 
-        
+        public int idEmp { get; set; }
+
         public string[] iEmpresa { get; set; } = new string[4];
         public void CarregarData()
-        {            
-            VrEmpresa vrEmpresa = new VrEmpresa();
-            dgvContatosPf.DataSource = vrEmpresa.InfoFornPf(idEmp);
-            dgvContatosPj.DataSource = vrEmpresa.InfoFornPj(idEmp);
+        {
+            CmdFornPF cmdFornPF = new CmdFornPF();
+            CmdFornPJ cmdFornPJ = new CmdFornPJ();
+            dgvContatosPf.DataSource = cmdFornPF.InfoFornPf(idEmp);
+            dgvContatosPj.DataSource = cmdFornPJ.InfoFornPj(idEmp);
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -59,7 +61,65 @@ namespace View
 
         private void txtFiltroPJ_KeyPress(object sender, KeyPressEventArgs e)
         {
+            CmdFornPJ cmdFornPJ = new CmdFornPJ();
+            cmdFornPJ.FiltroPj(idEmp, Convert.ToString(txtCliPJ.Text));
+        }
 
+        private void txtCliPJ_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCliPJ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CmdFornPJ cmdFornPJ = new CmdFornPJ();
+            cmdFornPJ.ClientePj(idEmp, Convert.ToInt32(txtCliPJ.Text));
+        }
+
+        private void txtFiltroPF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CmdFornPF cmdFornPF = new CmdFornPF();
+            cmdFornPF.FiltroPf(idEmp, Convert.ToString(txtCliPF.Text));
+        }
+
+        private void txtCliPF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CmdFornPF cmdFornPF = new CmdFornPF();
+            cmdFornPF.ClientePf(idEmp, Convert.ToInt32(txtCliPF.Text));
+        }
+
+        private void btnAddTelPJ_Click(object sender, EventArgs e)
+        {
+            int index = dgvContatosPj.CurrentRow.Index;
+            if (index == -1)
+            {
+                MessageBox.Show("Selecione um fornecedor");
+            }
+            else
+            {
+                int FkPj = (int)dgvContatosPj.Rows[index].Cells[0].Value;
+                frmTell frmTell = new frmTell();
+                frmTell.FkPj = FkPj;
+                frmTell.FkPf = 0;
+                frmTell.ShowDialog();
+            }
+        }
+
+        private void btnAddTelPF_Click(object sender, EventArgs e)
+        {
+            int index = dgvContatosPj.CurrentRow.Index;
+            if (index == -1)
+            {
+                MessageBox.Show("Selecione um fornecedor");
+            }
+            else
+            {
+                int FkPf = (int)dgvContatosPj.Rows[index].Cells[0].Value;
+                frmTell frmTell = new frmTell();
+                frmTell.FkPf = FkPf;
+                frmTell.FkPj = 0;
+                frmTell.ShowDialog();
+            }
         }
     }
 }

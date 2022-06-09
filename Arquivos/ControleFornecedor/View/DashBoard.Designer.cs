@@ -44,10 +44,16 @@
             this.txtCliPF = new System.Windows.Forms.TextBox();
             this.txtFiltroPF = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnAddTelPJ = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAddTelPF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContatosPj)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContatosPf)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvContatosPj
@@ -55,7 +61,9 @@
             this.dgvContatosPj.BackgroundColor = System.Drawing.Color.White;
             this.dgvContatosPj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContatosPj.Location = new System.Drawing.Point(12, 135);
+            this.dgvContatosPj.MultiSelect = false;
             this.dgvContatosPj.Name = "dgvContatosPj";
+            this.dgvContatosPj.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContatosPj.Size = new System.Drawing.Size(566, 351);
             this.dgvContatosPj.TabIndex = 0;
             this.dgvContatosPj.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContatosPj_CellContentClick);
@@ -109,7 +117,9 @@
             this.dgvContatosPf.BackgroundColor = System.Drawing.Color.White;
             this.dgvContatosPf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContatosPf.Location = new System.Drawing.Point(696, 135);
+            this.dgvContatosPf.MultiSelect = false;
             this.dgvContatosPf.Name = "dgvContatosPf";
+            this.dgvContatosPf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContatosPf.Size = new System.Drawing.Size(573, 351);
             this.dgvContatosPf.TabIndex = 4;
             // 
@@ -144,6 +154,8 @@
             this.txtCliPJ.Name = "txtCliPJ";
             this.txtCliPJ.Size = new System.Drawing.Size(65, 21);
             this.txtCliPJ.TabIndex = 7;
+            this.txtCliPJ.TextChanged += new System.EventHandler(this.txtCliPJ_TextChanged);
+            this.txtCliPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliPJ_KeyPress);
             // 
             // label4
             // 
@@ -187,6 +199,7 @@
             this.txtCliPF.Name = "txtCliPF";
             this.txtCliPF.Size = new System.Drawing.Size(65, 21);
             this.txtCliPF.TabIndex = 13;
+            this.txtCliPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliPF_KeyPress);
             // 
             // txtFiltroPF
             // 
@@ -194,6 +207,7 @@
             this.txtFiltroPF.Name = "txtFiltroPF";
             this.txtFiltroPF.Size = new System.Drawing.Size(204, 21);
             this.txtFiltroPF.TabIndex = 12;
+            this.txtFiltroPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroPF_KeyPress);
             // 
             // label6
             // 
@@ -205,12 +219,64 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Controle de fornecedores";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnAddTelPJ);
+            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(467, 75);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(111, 54);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Novo Telefone";
+            // 
+            // btnAddTelPJ
+            // 
+            this.btnAddTelPJ.FlatAppearance.BorderSize = 0;
+            this.btnAddTelPJ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAddTelPJ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnAddTelPJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTelPJ.Location = new System.Drawing.Point(6, 20);
+            this.btnAddTelPJ.Name = "btnAddTelPJ";
+            this.btnAddTelPJ.Size = new System.Drawing.Size(99, 23);
+            this.btnAddTelPJ.TabIndex = 1;
+            this.btnAddTelPJ.Text = "Adicionar";
+            this.btnAddTelPJ.UseVisualStyleBackColor = true;
+            this.btnAddTelPJ.Click += new System.EventHandler(this.btnAddTelPJ_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnAddTelPF);
+            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(1158, 75);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(111, 54);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Novo Telefone";
+            // 
+            // btnAddTelPF
+            // 
+            this.btnAddTelPF.FlatAppearance.BorderSize = 0;
+            this.btnAddTelPF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAddTelPF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnAddTelPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTelPF.Location = new System.Drawing.Point(6, 20);
+            this.btnAddTelPF.Name = "btnAddTelPF";
+            this.btnAddTelPF.Size = new System.Drawing.Size(99, 23);
+            this.btnAddTelPF.TabIndex = 1;
+            this.btnAddTelPF.Text = "Adicionar";
+            this.btnAddTelPF.UseVisualStyleBackColor = true;
+            this.btnAddTelPF.Click += new System.EventHandler(this.btnAddTelPF_Click);
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1281, 498);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -235,6 +301,8 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContatosPf)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +326,9 @@
         private System.Windows.Forms.TextBox txtCliPF;
         private System.Windows.Forms.TextBox txtFiltroPF;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnAddTelPJ;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnAddTelPF;
     }
 }

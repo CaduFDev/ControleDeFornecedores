@@ -32,6 +32,62 @@ namespace Model.Negocio
                 }
             }
         }
+
+        public DataTable InfoFornPj(int id)
+        {
+            using (var acesso = AcessoDAO())
+            {
+                acesso.Open();
+                using (var cmd = Comando(acesso))
+                {
+                    cmd.CommandText = "SELECT * FROM dbo.FORN_PJ WHERE FK_EMP = @CNPJ;";
+                    cmd.Parameters.Add(new SqlParameter("@CNPJ", id));
+                    cmd.CommandType = CommandType.Text;
+                    var resultado = cmd.ExecuteReader();
+                    DataTable data = new DataTable();
+                    data.Load(resultado);
+                    return data;
+                }
+            }
+        }
+
+        public DataTable ClientePj(int fk, int id)
+        {
+            using (var acesso = AcessoDAO())
+            {
+                acesso.Open();
+                using (var cmd = Comando(acesso))
+                {
+                    cmd.CommandText = "VerRegistrosPJ";
+                    cmd.Parameters.Add(new SqlParameter("@Emp", fk));
+                    cmd.Parameters.Add(new SqlParameter("@ID", id));
+                    cmd.CommandType = CommandType.Text;
+                    var resultado = cmd.ExecuteReader();
+                    DataTable data = new DataTable();
+                    data.Load(resultado);
+                    return data;
+                }
+            }
+        }
+
+        public DataTable FiltroPj(int fk, string busca)
+        {
+            using (var acesso = AcessoDAO())
+            {
+                acesso.Open();
+                using (var cmd = Comando(acesso))
+                {
+                    cmd.CommandText = "FiltrarPJ";
+                    cmd.Parameters.Add(new SqlParameter("@Emp", fk));
+                    cmd.Parameters.Add(new SqlParameter("@Busca", busca));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    var resultado = cmd.ExecuteReader();
+                    DataTable data = new DataTable();
+                    data.Load(resultado);
+                    return data;
+                }
+            }
+        }
     }
 }
 

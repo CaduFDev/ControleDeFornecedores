@@ -16,3 +16,4 @@ C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleForne
 C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\View\obj\Debug\View.DashBoard.resources
 C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\View\obj\Debug\View.AddPF.resources
 C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\View\obj\Debug\View.AddPj.resources
+C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\View\obj\Debug\View.frmTell.resources

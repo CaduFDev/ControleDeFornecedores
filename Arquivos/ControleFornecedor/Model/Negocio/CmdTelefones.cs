@@ -12,10 +12,11 @@ using Model.VrFi;
 
 namespace Model.Negocio
 {
-    public class TelefonesAdicionais : DataAccesObject
+    public class CmdTelefones : DataAccesObject
     {
-        protected void Inserir(string tel, int FkPj, int FkPf)
-        {         using (var acesso = AcessoDAO())
+        public void Inserir(string tel, int FkPj, int FkPf)
+        {
+            using (var acesso = AcessoDAO())
             {
                 acesso.Open();
                 using (var cmd = Comando(acesso))
@@ -23,7 +24,7 @@ namespace Model.Negocio
                     cmd.CommandText = "InserirTelAdd";
                     cmd.Parameters.Add(new SqlParameter("@tel", tel));
                     cmd.Parameters.Add(new SqlParameter("@FkPj", FkPj));
-                    cmd.Parameters.Add(new SqlParameter("@FkPf", FkPf));                    
+                    cmd.Parameters.Add(new SqlParameter("@FkPf", FkPf));
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
