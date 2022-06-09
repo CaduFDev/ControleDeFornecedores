@@ -25,7 +25,7 @@ namespace View
         {
             EmpresaLogada empresaLogada = new EmpresaLogada();
             DateTime dataNascimento = Convert.ToDateTime(txtNascimento.Text);
-            int menorIdade = comparar(dataNascimento);
+            int menorIdade = compararIdade(dataNascimento);
             if (empresaLogada.UF == "PR" && menorIdade < 6.570)
             {
                 MessageBox.Show("Seu estado não permite cadastro de menores de idade!");
@@ -41,7 +41,7 @@ namespace View
             }
             
         }
-        public static int comparar (DateTime dataNascimento)
+        public static int compararIdade (DateTime dataNascimento)
         {
             DateTime menorIdade = new DateTime(DateTime.Today.Year - 18, 1, 1);
             int resultado = (int)dataNascimento.Subtract(menorIdade).TotalDays;

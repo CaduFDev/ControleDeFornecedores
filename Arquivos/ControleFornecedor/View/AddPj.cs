@@ -24,7 +24,6 @@ namespace View
         {
             
             CmdFornPJ cmdFornPJ = new CmdFornPJ();
-            EmpresaLogada empresaLogada = new EmpresaLogada();
             cmdFornPJ.Inserir(txtNomeFantasia.Text, txtCnpj.Text, DateTime.Now, txtTelefone.Text,FkEmp);
             MessageBox.Show("Cadastro Realizado com sucesso!");
             DashBoard dashBoard = new DashBoard();

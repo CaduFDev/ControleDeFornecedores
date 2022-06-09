@@ -56,5 +56,10 @@ namespace View
         {
 
         }
+
+        private void txtFiltroPJ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

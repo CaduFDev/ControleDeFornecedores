@@ -29,14 +29,21 @@
         private void InitializeComponent()
         {
             this.dgvContatosPj = new System.Windows.Forms.DataGridView();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.txtFiltroPJ = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnPJ = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvContatosPf = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtCliPJ = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCliPF = new System.Windows.Forms.TextBox();
+            this.txtFiltroPF = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContatosPj)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContatosPf)).BeginInit();
@@ -49,23 +56,24 @@
             this.dgvContatosPj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContatosPj.Location = new System.Drawing.Point(12, 135);
             this.dgvContatosPj.Name = "dgvContatosPj";
-            this.dgvContatosPj.Size = new System.Drawing.Size(392, 351);
+            this.dgvContatosPj.Size = new System.Drawing.Size(566, 351);
             this.dgvContatosPj.TabIndex = 0;
             this.dgvContatosPj.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContatosPj_CellContentClick);
             // 
-            // txtFiltro
+            // txtFiltroPJ
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(12, 105);
-            this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(275, 21);
-            this.txtFiltro.TabIndex = 1;
-            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
+            this.txtFiltroPJ.Location = new System.Drawing.Point(132, 105);
+            this.txtFiltroPJ.Name = "txtFiltroPJ";
+            this.txtFiltroPJ.Size = new System.Drawing.Size(204, 21);
+            this.txtFiltroPJ.TabIndex = 1;
+            this.txtFiltroPJ.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
+            this.txtFiltroPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroPJ_KeyPress);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnPJ);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(293, 72);
+            this.groupBox1.Location = new System.Drawing.Point(12, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(111, 54);
             this.groupBox1.TabIndex = 2;
@@ -89,34 +97,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(410, 473);
+            this.label2.Location = new System.Drawing.Point(585, 470);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "CamelDev © 2022";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(521, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 21);
-            this.textBox1.TabIndex = 5;
-            // 
             // dgvContatosPf
             // 
             this.dgvContatosPf.BackgroundColor = System.Drawing.Color.White;
             this.dgvContatosPf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContatosPf.Location = new System.Drawing.Point(521, 135);
+            this.dgvContatosPf.Location = new System.Drawing.Point(696, 135);
             this.dgvContatosPf.Name = "dgvContatosPf";
-            this.dgvContatosPf.Size = new System.Drawing.Size(392, 351);
+            this.dgvContatosPf.Size = new System.Drawing.Size(573, 351);
             this.dgvContatosPf.TabIndex = 4;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(806, 72);
+            this.groupBox2.Location = new System.Drawing.Point(696, 72);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(107, 54);
             this.groupBox2.TabIndex = 3;
@@ -137,18 +138,92 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // txtCliPJ
+            // 
+            this.txtCliPJ.Location = new System.Drawing.Point(342, 105);
+            this.txtCliPJ.Name = "txtCliPJ";
+            this.txtCliPJ.Size = new System.Drawing.Size(65, 21);
+            this.txtCliPJ.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(129, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Buscar clientes";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(339, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 16);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Cliente";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(809, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 16);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Buscar clientes";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1019, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 16);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Cliente";
+            // 
+            // txtCliPF
+            // 
+            this.txtCliPF.Location = new System.Drawing.Point(1022, 105);
+            this.txtCliPF.Name = "txtCliPF";
+            this.txtCliPF.Size = new System.Drawing.Size(65, 21);
+            this.txtCliPF.TabIndex = 13;
+            // 
+            // txtFiltroPF
+            // 
+            this.txtFiltroPF.Location = new System.Drawing.Point(812, 105);
+            this.txtFiltroPF.Name = "txtFiltroPF";
+            this.txtFiltroPF.Size = new System.Drawing.Size(204, 21);
+            this.txtFiltroPF.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(515, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(245, 23);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Controle de fornecedores";
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(926, 498);
+            this.ClientSize = new System.Drawing.Size(1281, 498);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtCliPF);
+            this.Controls.Add(this.txtFiltroPF);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtCliPJ);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgvContatosPf);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtFiltro);
+            this.Controls.Add(this.txtFiltroPJ);
             this.Controls.Add(this.dgvContatosPj);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -168,13 +243,20 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvContatosPj;
-        private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.TextBox txtFiltroPJ;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnPJ;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dgvContatosPf;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtCliPJ;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCliPF;
+        private System.Windows.Forms.TextBox txtFiltroPF;
+        private System.Windows.Forms.Label label6;
     }
 }
