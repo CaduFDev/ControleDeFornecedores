@@ -67,7 +67,7 @@
             this.btnCriar.Location = new System.Drawing.Point(142, 122);
             this.btnCriar.Name = "btnCriar";
             this.btnCriar.Size = new System.Drawing.Size(75, 23);
-            this.btnCriar.TabIndex = 2;
+            this.btnCriar.TabIndex = 3;
             this.btnCriar.Text = "Criar";
             this.btnCriar.UseVisualStyleBackColor = true;
             // 
@@ -81,7 +81,7 @@
             this.btnAcessar.Location = new System.Drawing.Point(10, 122);
             this.btnAcessar.Name = "btnAcessar";
             this.btnAcessar.Size = new System.Drawing.Size(75, 23);
-            this.btnAcessar.TabIndex = 3;
+            this.btnAcessar.TabIndex = 2;
             this.btnAcessar.Text = "Acessar";
             this.btnAcessar.UseVisualStyleBackColor = true;
             this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click);
@@ -91,7 +91,7 @@
             this.txtCnpj.Location = new System.Drawing.Point(10, 93);
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(207, 23);
-            this.txtCnpj.TabIndex = 4;
+            this.txtCnpj.TabIndex = 1;
             // 
             // label3
             // 

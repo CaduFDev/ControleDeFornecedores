@@ -14,7 +14,7 @@ namespace Model.Negocio
 {
     public class CmdTelefones : DataAccesObject
     {
-        public void Inserir(string tel, int FkPj, int FkPf)
+        public void InserirPj(string tel, int FkPj, int FkPf)
         {
             using (var acesso = AcessoDAO())
             {

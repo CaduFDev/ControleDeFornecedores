@@ -18,19 +18,25 @@ namespace View
             InitializeComponent();
         }
         public int FkPj { get; set; }
-        public int FkPf { get; set; }
+        
+        private int fkPf;
+        public int FkPf
+    {
+            get { return fkPf; }
+            set { fkPf = value; }
+        }
+
 
         private void frmTell_Load(object sender, EventArgs e)
         {
-            CmdTelefones telefonesAdicionais = new CmdTelefones();
-            telefonesAdicionais.Inserir(txtTelefone.Text,FkPj,FkPf);
-            MessageBox.Show("Telefone cadastrado com sucesso!");
-            this.Close();
+            
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-
+            CmdTelefones telefonesAdicionais = new CmdTelefones();
+            telefonesAdicionais.InserirPj(Convert.ToString(txtTelefone.Text), FkPj, FkPf);
+            MessageBox.Show("Telefone cadastrado com sucesso!");            
         }
     }
 }

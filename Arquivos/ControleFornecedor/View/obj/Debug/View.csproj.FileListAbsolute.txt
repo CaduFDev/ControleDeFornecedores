@@ -17,3 +17,22 @@ C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleForne
 C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\View\obj\Debug\View.AddPF.resources
 C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\View\obj\Debug\View.AddPj.resources
 C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\View\obj\Debug\View.frmTell.resources
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\bin\Debug\View.exe.config
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\bin\Debug\View.exe
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\bin\Debug\View.pdb
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\bin\Debug\Model.dll
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\bin\Debug\Model.pdb
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.csproj.AssemblyReference.cache
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.csproj.SuggestedBindingRedirects.cache
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.AddPF.resources
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.AddPj.resources
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.DashBoard.resources
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.frmCadEmpresa.resources
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.frmLogin.resources
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.frmTell.resources
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.Properties.Resources.resources
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.csproj.CopyComplete
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.exe
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\View\obj\Debug\View.pdb

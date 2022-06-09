@@ -25,8 +25,8 @@ namespace View
         public void CarregarData()
         {
             CmdFornPF cmdFornPF = new CmdFornPF();
-            CmdFornPJ cmdFornPJ = new CmdFornPJ();
             dgvContatosPf.DataSource = cmdFornPF.InfoFornPf(idEmp);
+            CmdFornPJ cmdFornPJ = new CmdFornPJ();
             dgvContatosPj.DataSource = cmdFornPJ.InfoFornPj(idEmp);
         }
 
@@ -61,8 +61,7 @@ namespace View
 
         private void txtFiltroPJ_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CmdFornPJ cmdFornPJ = new CmdFornPJ();
-            cmdFornPJ.FiltroPj(idEmp, Convert.ToString(txtCliPJ.Text));
+           
         }
 
         private void txtCliPJ_TextChanged(object sender, EventArgs e)
@@ -72,20 +71,17 @@ namespace View
 
         private void txtCliPJ_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CmdFornPJ cmdFornPJ = new CmdFornPJ();
-            cmdFornPJ.ClientePj(idEmp, Convert.ToInt32(txtCliPJ.Text));
+           
         }
 
         private void txtFiltroPF_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CmdFornPF cmdFornPF = new CmdFornPF();
-            cmdFornPF.FiltroPf(idEmp, Convert.ToString(txtCliPF.Text));
+           
         }
 
         private void txtCliPF_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CmdFornPF cmdFornPF = new CmdFornPF();
-            cmdFornPF.ClientePf(idEmp, Convert.ToInt32(txtCliPF.Text));
+            
         }
 
         private void btnAddTelPJ_Click(object sender, EventArgs e)
@@ -99,8 +95,7 @@ namespace View
             {
                 int FkPj = (int)dgvContatosPj.Rows[index].Cells[0].Value;
                 frmTell frmTell = new frmTell();
-                frmTell.FkPj = FkPj;
-                frmTell.FkPf = 0;
+                frmTell.FkPj = FkPj;                
                 frmTell.ShowDialog();
             }
         }
@@ -116,10 +111,44 @@ namespace View
             {
                 int FkPf = (int)dgvContatosPj.Rows[index].Cells[0].Value;
                 frmTell frmTell = new frmTell();
-                frmTell.FkPf = FkPf;
-                frmTell.FkPj = 0;
+                frmTell.FkPf = FkPf;                
                 frmTell.ShowDialog();
             }
+        }
+
+        private void btnAtz_Click(object sender, EventArgs e)
+        {
+            CarregarData();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string busca = txtFiltroPJ.Text;
+            CmdFornPJ cmdFornPJ = new CmdFornPJ();            
+            dgvContatosPj.DataSource = cmdFornPJ.FiltroPj(idEmp, busca);
+            dgvContatosPj.Refresh();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {         
+            CmdFornPJ cmdFornPJ = new CmdFornPJ();
+            dgvContatosPj.DataSource = cmdFornPJ.ClientePj(idEmp, Convert.ToInt32(txtCliPJ.Text));
+            dgvContatosPj.Refresh();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string busca = txtFiltroPF.Text;
+            CmdFornPF cmdFornPF = new CmdFornPF();
+            dgvContatosPf.DataSource = cmdFornPF.FiltroPf(idEmp, busca);
+            dgvContatosPj.Refresh();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CmdFornPF cmdFornPF = new CmdFornPF();
+            dgvContatosPf.DataSource = cmdFornPF.ClientePf(idEmp, Convert.ToInt32(txtCliPF.Text));
+            dgvContatosPj.Refresh();
         }
     }
 }

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3a1e5c99-ecc2-4916-92db-2405fb348199": {
+      "ProjectGuid": "3a1e5c99-ecc2-4916-92db-2405fb348199",
+      "DisplayName": "Model",
+      "ColorIndex": 0
+    },
+    "e3af2635-7a98-4569-a8ae-24deee8a4c0d": {
+      "ProjectGuid": "e3af2635-7a98-4569-a8ae-24deee8a4c0d",
+      "DisplayName": "View",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

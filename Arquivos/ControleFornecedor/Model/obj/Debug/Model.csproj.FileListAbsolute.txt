@@ -4,3 +4,9 @@ C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleForne
 C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\Model\obj\Debug\Model.dll
 C:\Users\caduzeira\OneDrive\Área de Trabalho\NovoProjeto\Arquivos\ControleFornecedor\Model\obj\Debug\Model.pdb
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\Model\bin\Debug\Model.dll
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\Model\bin\Debug\Model.pdb
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\Model\obj\Debug\Model.dll
+C:\Users\Galvo Arte\Desktop\Y22\CAMELDEV\ControleDeFornecedores\Arquivos\ControleFornecedor\Model\obj\Debug\Model.pdb

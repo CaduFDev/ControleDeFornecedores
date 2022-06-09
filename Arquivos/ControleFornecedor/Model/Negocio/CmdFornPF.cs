@@ -61,7 +61,7 @@ namespace Model.Negocio
                     cmd.CommandText = "VerRegistrosPF";
                     cmd.Parameters.Add(new SqlParameter("@Emp", fk));
                     cmd.Parameters.Add(new SqlParameter("@ID", id));
-                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandType = CommandType.StoredProcedure;
                     var resultado = cmd.ExecuteReader();
                     DataTable data = new DataTable();
                     data.Load(resultado);

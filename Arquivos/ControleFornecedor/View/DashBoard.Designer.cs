@@ -48,6 +48,11 @@
             this.btnAddTelPJ = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnAddTelPF = new System.Windows.Forms.Button();
+            this.btnAtz = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContatosPj)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContatosPf)).BeginInit();
@@ -58,11 +63,14 @@
             // 
             // dgvContatosPj
             // 
+            this.dgvContatosPj.AllowUserToAddRows = false;
+            this.dgvContatosPj.AllowUserToDeleteRows = false;
             this.dgvContatosPj.BackgroundColor = System.Drawing.Color.White;
             this.dgvContatosPj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContatosPj.Location = new System.Drawing.Point(12, 135);
             this.dgvContatosPj.MultiSelect = false;
             this.dgvContatosPj.Name = "dgvContatosPj";
+            this.dgvContatosPj.ReadOnly = true;
             this.dgvContatosPj.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContatosPj.Size = new System.Drawing.Size(566, 351);
             this.dgvContatosPj.TabIndex = 0;
@@ -97,7 +105,7 @@
             this.btnPJ.Location = new System.Drawing.Point(6, 20);
             this.btnPJ.Name = "btnPJ";
             this.btnPJ.Size = new System.Drawing.Size(99, 23);
-            this.btnPJ.TabIndex = 1;
+            this.btnPJ.TabIndex = 5;
             this.btnPJ.Text = "PJ";
             this.btnPJ.UseVisualStyleBackColor = true;
             this.btnPJ.Click += new System.EventHandler(this.btnPJ_Click);
@@ -114,11 +122,14 @@
             // 
             // dgvContatosPf
             // 
+            this.dgvContatosPf.AllowUserToAddRows = false;
+            this.dgvContatosPf.AllowUserToDeleteRows = false;
             this.dgvContatosPf.BackgroundColor = System.Drawing.Color.White;
             this.dgvContatosPf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContatosPf.Location = new System.Drawing.Point(696, 135);
             this.dgvContatosPf.MultiSelect = false;
             this.dgvContatosPf.Name = "dgvContatosPf";
+            this.dgvContatosPf.ReadOnly = true;
             this.dgvContatosPf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContatosPf.Size = new System.Drawing.Size(573, 351);
             this.dgvContatosPf.TabIndex = 4;
@@ -143,7 +154,7 @@
             this.button2.Location = new System.Drawing.Point(6, 20);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 23);
-            this.button2.TabIndex = 0;
+            this.button2.TabIndex = 11;
             this.button2.Text = "PF";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -152,15 +163,15 @@
             // 
             this.txtCliPJ.Location = new System.Drawing.Point(342, 105);
             this.txtCliPJ.Name = "txtCliPJ";
-            this.txtCliPJ.Size = new System.Drawing.Size(65, 21);
-            this.txtCliPJ.TabIndex = 7;
+            this.txtCliPJ.Size = new System.Drawing.Size(104, 21);
+            this.txtCliPJ.TabIndex = 3;
             this.txtCliPJ.TextChanged += new System.EventHandler(this.txtCliPJ_TextChanged);
             this.txtCliPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliPJ_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 86);
+            this.label4.Location = new System.Drawing.Point(129, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 16);
             this.label4.TabIndex = 11;
@@ -169,7 +180,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(339, 86);
+            this.label5.Location = new System.Drawing.Point(339, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 10;
@@ -178,7 +189,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(809, 86);
+            this.label1.Location = new System.Drawing.Point(809, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 16);
             this.label1.TabIndex = 15;
@@ -187,7 +198,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1019, 86);
+            this.label3.Location = new System.Drawing.Point(1019, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 14;
@@ -197,8 +208,8 @@
             // 
             this.txtCliPF.Location = new System.Drawing.Point(1022, 105);
             this.txtCliPF.Name = "txtCliPF";
-            this.txtCliPF.Size = new System.Drawing.Size(65, 21);
-            this.txtCliPF.TabIndex = 13;
+            this.txtCliPF.Size = new System.Drawing.Size(104, 21);
+            this.txtCliPF.TabIndex = 9;
             this.txtCliPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliPF_KeyPress);
             // 
             // txtFiltroPF
@@ -206,7 +217,7 @@
             this.txtFiltroPF.Location = new System.Drawing.Point(812, 105);
             this.txtFiltroPF.Name = "txtFiltroPF";
             this.txtFiltroPF.Size = new System.Drawing.Size(204, 21);
-            this.txtFiltroPF.TabIndex = 12;
+            this.txtFiltroPF.TabIndex = 7;
             this.txtFiltroPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroPF_KeyPress);
             // 
             // label6
@@ -239,7 +250,7 @@
             this.btnAddTelPJ.Location = new System.Drawing.Point(6, 20);
             this.btnAddTelPJ.Name = "btnAddTelPJ";
             this.btnAddTelPJ.Size = new System.Drawing.Size(99, 23);
-            this.btnAddTelPJ.TabIndex = 1;
+            this.btnAddTelPJ.TabIndex = 6;
             this.btnAddTelPJ.Text = "Adicionar";
             this.btnAddTelPJ.UseVisualStyleBackColor = true;
             this.btnAddTelPJ.Click += new System.EventHandler(this.btnAddTelPJ_Click);
@@ -264,10 +275,76 @@
             this.btnAddTelPF.Location = new System.Drawing.Point(6, 20);
             this.btnAddTelPF.Name = "btnAddTelPF";
             this.btnAddTelPF.Size = new System.Drawing.Size(99, 23);
-            this.btnAddTelPF.TabIndex = 1;
+            this.btnAddTelPF.TabIndex = 12;
             this.btnAddTelPF.Text = "Adicionar";
             this.btnAddTelPF.UseVisualStyleBackColor = true;
             this.btnAddTelPF.Click += new System.EventHandler(this.btnAddTelPF_Click);
+            // 
+            // btnAtz
+            // 
+            this.btnAtz.Location = new System.Drawing.Point(585, 135);
+            this.btnAtz.Name = "btnAtz";
+            this.btnAtz.Size = new System.Drawing.Size(105, 23);
+            this.btnAtz.TabIndex = 17;
+            this.btnAtz.Text = "Atualizar listas";
+            this.btnAtz.UseVisualStyleBackColor = true;
+            this.btnAtz.Click += new System.EventHandler(this.btnAtz_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(220, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(390, 79);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(56, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(1070, 79);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(56, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Buscar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(900, 79);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(56, 23);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Buscar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // DashBoard
             // 
@@ -275,6 +352,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1281, 498);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAtz);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label6);
@@ -330,5 +412,10 @@
         private System.Windows.Forms.Button btnAddTelPJ;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnAddTelPF;
+        private System.Windows.Forms.Button btnAtz;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

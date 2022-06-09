@@ -46,7 +46,7 @@
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(14, 46);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(208, 21);
             this.txtTelefone.TabIndex = 1;
@@ -71,8 +71,9 @@
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTell";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo telefone";
             this.Load += new System.EventHandler(this.frmTell_Load);
             this.ResumeLayout(false);
